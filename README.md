@@ -29,7 +29,7 @@ In Java we use a BufferedImage object, while in C the image is treated like an a
 
 ## Parallel version
 
-# Java
+#### Java
 In java we use Java threads. The task is to parallelize the 3 main cycles, with 3 different type of threads.
 
 The first type provides the color space conversion from RGB to YCbCr while computes locally the histogram. 
@@ -41,7 +41,7 @@ only on a sub-part of the equalized histogram.
 The third type is like the first, where each thread works on a sub-part of the image and it maps the new value 
 based on the new histogram. It Converts from YCbCr to RGB.
 
-# CUDA
+#### CUDA
 In CUDA we use 3 different kernels. For the memory management we allocate some objects with cudaMalloc in the global memory:
 * a buffer for the input image, and then we do a cudaMemCpy to move it from host to the decive;
 * an array of int of size 256 for the histogram;
