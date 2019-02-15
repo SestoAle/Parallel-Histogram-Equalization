@@ -27,7 +27,7 @@ For the implementation were used Java and C/CUDA. The sequential one is very sim
 from YCbCr to RGB.
 In Java we use a BufferedImage object, while in C the image is treated like an array of char.
 
-## Parallel version
+### Parallel version
 
 #### Java
 In java we use Java threads. The task is to parallelize the 3 main cycles, with 3 different type of threads.
