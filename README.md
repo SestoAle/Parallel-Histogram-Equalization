@@ -50,7 +50,7 @@ In CUDA we use 3 different kernels. For the memory management we allocate some o
 
 For the first type we create a ```__shared__ int histogram [256]``` to compute the histogram locally in a block;
 Then the kernel converts the image from RGB to YCbCr. If the numebr of thread is greater or equal to the number of pixels,
-then each thread will process only one pixel; else each thread will
+then each thread will process only one pixel; otherwise each thread will
 process contiguous elements of different sections of the image.
 
 <p align="center">
