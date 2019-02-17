@@ -21,7 +21,7 @@ The implementation covers both sequential and parallel version.
 
 ### Sequential version
 For the implementation were used Java and C/CUDA. The sequential one is very similar for both languages:
-* we load a image file and for each pixel we convert it from RGB to YCbCr while we compute the Y channel histogram;
+* we load a image file and for each pixel, we convert it from RGB to YCbCr while we compute the Y channel histogram;
 * we make the histogram equalization;
 * for each pixel of the image, we map the old values to the new ones and we make the conversion
 from YCbCr to RGB.
@@ -43,7 +43,7 @@ based on the new histogram. It Converts from YCbCr to RGB.
 
 #### CUDA
 In CUDA we use 3 different kernels. For the memory management we allocate some objects with cudaMalloc in the global memory:
-* a buffer for the input image, and then we do a cudaMemCpy to move it from host to the decive;
+* a buffer as the input image, and then we do a cudaMemCpy to move it from host to the decive;
 * an array of int of size 256 for the histogram;
 * an array of int of size 256 for the cdf;
 * an array of int of size 256 for the equalized histogram.
